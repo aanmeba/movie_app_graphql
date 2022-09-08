@@ -1,0 +1,55 @@
+@value movieLightGradient from '../common/colors.css';
+
+.movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: movieLightGradient;
+  width: 100%;
+  height: 15rem;
+}
+
+.container {
+  display: flex;
+}
+
+.container ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  width: 18rem;
+  height: 10rem;
+  border: 1px black solid;
+  margin: 0.5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.image {
+  width: auto;
+  height: 10rem;
+  object-fit: scale-down;
+  
+}
+
+.movieTitle {
+  z-index: 1001;
+  color: white;
+  position: absolute;
+  top: 5rem;
+  padding: 1rem;
+}
