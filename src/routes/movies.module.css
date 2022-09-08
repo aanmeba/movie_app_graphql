@@ -13,11 +13,22 @@
   align-items: center;
   background-image: movieLightGradient;
   width: 100%;
-  height: 15rem;
+  height: 40vh;
+}
+
+.heading {
+  display: block;
+  font-size: 5rem;
+}
+.loading {
+  display: block;
+  opacity: 0.5;
 }
 
 .container {
   display: flex;
+  position: relative;
+  top: -5rem;
 }
 
 .container ul {
@@ -30,14 +41,20 @@
 
 .card {
   display: flex;
-  width: 18rem;
   height: 10rem;
-  border: 1px black solid;
   margin: 0.5rem;
   box-sizing: border-box;
   position: relative;
+  background-color: transparent;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.card:hover {
+  background-color: black;
+  opacity: 0.8;
+  transform: scale(1.05, 1.05);
+  transition: 0.3s;
+}
 
 .image {
   width: auto;

@@ -9,36 +9,27 @@ const ALL_MOVIES = gql`
       id
       image_landscape
     }
-    allTweets {
-      text
-      id
-      author {
-        fullName
-      }
-    }
   }
 `;
 
 export default function Movies() {
   const { data, loading, error } = useQuery(ALL_MOVIES);
-  if (loading) {
-    return <h1 className={styles.heading}>Loading...</h1>;
-  }
-  if (error) {
-    return <h1 className={styles.heading}> Couldn't fetch :( </h1>;
-  }
+
+  console.log("loading", loading);
+  console.log("data on movies", data);
 
   return (
     <div className={styles.movies}>
       <div className={styles.header}>
-        <h1 className={styles.heading}>Movies</h1>
+        {error && <h1 className={styles.loading}>Couldn't fetch :(</h1>}
+        <h1 className={styles.heading}>{loading ? "Loading..." : "Movies"}</h1>
       </div>
       <div className={styles.container}>
         <ul>
-          {data.allMovies.map((movie) => (
-            <div className={styles.card}>
+          {data?.allMovies?.map((movie) => (
+            <div className={styles.card} key={movie.id}>
               <Link to={`/movies/${movie.id}`}>
-                <li key={movie.id}>
+                <li>
                   <img
                     className={styles.image}
                     src={movie.image_landscape}
