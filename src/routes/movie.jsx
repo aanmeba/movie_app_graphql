@@ -54,7 +54,7 @@ export default function Movie() {
           <div className={styles.small}>
             <p className={styles.rating}>⭐️ {data?.movie?.vote_average}</p>
             <button className={styles.button} onClick={onClick}>
-              {data?.movie?.isLiked ? "Linked" : "Like "}
+              {data?.movie?.isLiked ? "Liked" : "Like "}
             </button>
           </div>
           <p className={styles.overview}>{data?.movie?.overview}</p>

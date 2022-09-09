@@ -5,13 +5,15 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  background-image: movieLightGradient;
+  height: 100%;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: movieLightGradient;
+  /* background-image: movieLightGradient; */
   width: 100%;
   height: 40vh;
 }
